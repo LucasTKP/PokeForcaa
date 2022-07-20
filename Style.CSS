@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(4, 100, 133);
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
+    color: rgb(17, 75, 163);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.sistem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.background {
+    background: url(./img/background.gif) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    box-shadow: -5px 0 30px rgba(255, 255, 255, 0.192);
+}
+
+.content {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.452);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.185);
+    height: 300px;
+    padding: 50px;
+    align-self: center;
+    border-radius: 8px;
+}
+
+
+.button button{
+    background: linear-gradient(to right, rgb(89, 136, 197), rgb(17, 75, 163));
+    padding: 15px;
+    border-radius: 100px;
+    width: 100px;
+    color: white;
+    font-family: monospace;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+
+.button button:hover{
+   transform: translateY(-3px);
+   filter: opacity(.6); 
+}
+
+input {
+    background: transparent;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.background img {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    justify-self: center; 
+}
+
+.formCadastro,
+.formLogin {
+    display: flex;
+}
+
+#showpassoword,
+#showpassowordtwo {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#showpassoword img,
+#showpassowordtwo  img {
+    width: 20px;
+}
