@@ -103,7 +103,7 @@ function verificar () {
         teclado.value = ""
     }
     async function getPokemon() {
-        const result = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
+        const result = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000')
         json = await result.json()
         for (let i = 0; i < 1000; i++ ){
             palavras.push(json.results[i].name)
