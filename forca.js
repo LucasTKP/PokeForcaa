@@ -105,7 +105,7 @@ function verificar () {
     async function getPokemon() {
         const result = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
         json = await result.json()
-        for (let i = 0; i < 100; i++ ){
+        for (let i = 0; i < 1000; i++ ){
             palavras.push(json.results[i].name)
         }
         escolhendoPalavra()
