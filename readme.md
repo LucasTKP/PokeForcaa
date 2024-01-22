@@ -16,7 +16,7 @@ Este projeto consiste em uma forca de Pokémons, existe mais de 1000 nomes difer
 
 ### 🎯 Objetivo:
 
-criar uma forca de Pokémons utilizando html e java script
+Criar uma forca de Pokémons utilizando html, css e java script.
 
 <br /> <br />
 
@@ -24,7 +24,7 @@ criar uma forca de Pokémons utilizando html e java script
 
 - Html
 - Css
-- JavaScript
+- Java Script
 
   <br /> <br />
 
