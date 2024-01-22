@@ -1,5 +1,5 @@
 <h1 align="center">Poke Forca</h1>
-<p align="center">Primeiro projeto que criei o sozinho, o objetivo era criar uma forca de Pokémons utilizando html e java script, como eu não tinha conhecimento de banco de dados, utilizei localStorage.</p> <br />
+<p align="center">Primeiro projeto que criei o sozinho, o objetivo era criar uma forca de Pokémons utilizando html, css e java script, como eu não tinha conhecimento de banco de dados, utilizei localStorage.</p> <br />
 
 ### 🔗 Links:
 <a href="https://github.com/LucasTKP/PokeForcaa">Projeto PokeForca</a></br>
