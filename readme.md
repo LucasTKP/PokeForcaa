@@ -31,7 +31,7 @@ Criar uma forca de Pokémons utilizando html, css e java script.
 ### 📷 Tela principal:
 <div align="center">
   <a href="https://projectdoctorcare.vercel.app/">
-    <img src="/img/imageProject.png" alt="Preview 2CO">
+    <img src="/img/imageProject.png" alt="Preview Poke Forca">
   </a>
 </div>
 
