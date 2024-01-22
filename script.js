@@ -29,9 +29,6 @@ const cadastrar = () => {
         const dbStorage = JSON.parse(localStorage.getItem('DB'))
         const filtered = dbStorage.find(validation)
 
-        console.log(filtered)
-
-    
     
     if (inputCadastroNome.value === "" || inputCadastroSenha === "" ){
         alert ("Prencha os campos de texto")

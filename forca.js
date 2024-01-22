@@ -49,58 +49,59 @@ function escolhendoPalavra(){
     div.appendChild(elemento);
     letrashtml.appendChild(div)  
 
-    
-    
-
 })
 }
 function verificar () {
-    const  letradaforca = document.getElementById("letradaforca")
-    camadaalfabeto = alfabeto.indexOf(teclado.value) 
-    alfabeto[camadaalfabeto] = ""
-    if (camadaalfabeto === -1){
-        alert("esta letra ja foi usada")
+    if(teclado.value === "" || teclado.value === undefined || teclado.value === null){
+
     } else {
-        letrasUtilizadas.children[camadaalfabeto].classList.add("usado")
-    if (letras.includes(teclado.value)){
-        [...sorteada].forEach(function(char){ 
-            if (char == teclado.value){
-            camada = letras.indexOf(char)
-            letras[camada] = ""   
-            letrashtml.children[camada].classList.remove("invisible")
-            letrashtml.children[camada].classList.add("visible")
-            ganhador = ganhador + 1
-        
-            if (ganhador >= letras.length){
+        camadaalfabeto = alfabeto.indexOf(teclado.value) 
+        alfabeto[camadaalfabeto] = ""
+        if (camadaalfabeto === -1){
+            alert("esta letra ja foi usada")
+        } else {
+            letrasUtilizadas.children[camadaalfabeto].classList.add("usado")
+        if (letras.includes(teclado.value)){
+            [...sorteada].forEach(function(char){ 
+                if (char == teclado.value){
+                camada = letras.indexOf(char)
+                letras[camada] = ""   
+                letrashtml.children[camada].classList.remove("invisible")
+                letrashtml.children[camada].classList.add("visible")
+                ganhador = ganhador + 1
+            
+                if (ganhador >= letras.length){
+                    fotopokemons.setAttribute('src',  urlfoto)
+                    fotopokemons.classList.remove("imginvisible")
+                    setTimeout(() => {
+                    
+                    alert("VOCÊ ACERTOU")
+                    window.location.href = "./sortear.html";
+    
+                      }, "1000"
+                      )     
+                }  
+                } 
+                })
+        } else {
+            derrota = derrota + 1
+            coracaohtml.children[derrota].innerHTML = "❤"
+            alert("errou")
+            console.log(derrota)
+            if (derrota === 5) {
                 fotopokemons.setAttribute('src',  urlfoto)
                 fotopokemons.classList.remove("imginvisible")
                 setTimeout(() => {
-                
-                alert("VOCÊ ACERTOU")
-                window.location.href = "./sortear.html";
-
-                  }, "1000"
-                  )     
-            }  
-            } 
-            })
-    } else {
-        derrota = derrota + 1
-        coracaohtml.children[derrota].innerHTML = "❤"
-        alert("errou")
-        console.log(derrota)
-        if (derrota === 5) {
-            fotopokemons.setAttribute('src',  urlfoto)
-            fotopokemons.classList.remove("imginvisible")
-            setTimeout(() => {
-                alert("VOCÊ PERDEU O POKEMON ERA O: " + sorteada)
-                window.location.href = "./sortear.html";
-                  }, "3000"
-                  )  
-            } 
+                    alert("VOCÊ PERDEU O POKEMON ERA O: " + sorteada)
+                    window.location.href = "./sortear.html";
+                      }, "3000"
+                      )  
+                } 
+            }
         }
+            teclado.value = "" 
     }
-        teclado.value = ""
+    
     }
     async function getPokemon() {
         const result = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000')
